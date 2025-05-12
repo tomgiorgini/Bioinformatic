@@ -1,0 +1,193 @@
+geo_accession	individual:ch1	tissue:ch1
+GSM548376	101	adjacent liver non-tumor
+GSM548378	105	adjacent liver non-tumor
+GSM548380	106	adjacent liver non-tumor
+GSM548382	108	adjacent liver non-tumor
+GSM548485	11	adjacent liver non-tumor
+GSM548384	110	adjacent liver non-tumor
+GSM548386	111	adjacent liver non-tumor
+GSM548388	114	adjacent liver non-tumor
+GSM548390	115	adjacent liver non-tumor
+GSM548392	116	adjacent liver non-tumor
+GSM548394	117	adjacent liver non-tumor
+GSM548396	118	adjacent liver non-tumor
+GSM548398	119	adjacent liver non-tumor
+GSM548400	121	adjacent liver non-tumor
+GSM548454	128	adjacent liver non-tumor
+GSM548402	146	adjacent liver non-tumor
+GSM548404	148	adjacent liver non-tumor
+GSM548456	149	adjacent liver non-tumor
+GSM548458	153	adjacent liver non-tumor
+GSM548407	154	adjacent liver non-tumor
+GSM548409	155	adjacent liver non-tumor
+GSM548461	156	adjacent liver non-tumor
+GSM548411	157	adjacent liver non-tumor
+GSM548413	159	adjacent liver non-tumor
+GSM548415	160	adjacent liver non-tumor
+GSM548463	161	adjacent liver non-tumor
+GSM548417	162	adjacent liver non-tumor
+GSM548419	163	adjacent liver non-tumor
+GSM548421	164	adjacent liver non-tumor
+GSM548423	165	adjacent liver non-tumor
+GSM548425	166	adjacent liver non-tumor
+GSM548427	167	adjacent liver non-tumor
+GSM548429	170	adjacent liver non-tumor
+GSM548431	171	adjacent liver non-tumor
+GSM548433	172	adjacent liver non-tumor
+GSM548435	173	adjacent liver non-tumor
+GSM548437	174	adjacent liver non-tumor
+GSM548439	175	adjacent liver non-tumor
+GSM548441	179	adjacent liver non-tumor
+GSM548443	180	adjacent liver non-tumor
+GSM548445	200	adjacent liver non-tumor
+GSM548447	203	adjacent liver non-tumor
+GSM548449	205	adjacent liver non-tumor
+GSM548340	21	adjacent liver non-tumor
+GSM548465	211	adjacent liver non-tumor
+GSM548467	212	adjacent liver non-tumor
+GSM548469	221	adjacent liver non-tumor
+GSM548471	227	adjacent liver non-tumor
+GSM548488	23	adjacent liver non-tumor
+GSM548490	24	adjacent liver non-tumor
+GSM548492	25	adjacent liver non-tumor
+GSM548473	255	adjacent liver non-tumor
+GSM548480	267	adjacent liver non-tumor
+GSM548475	268	adjacent liver non-tumor
+GSM548494	27	adjacent liver non-tumor
+GSM548482	270	adjacent liver non-tumor
+GSM548481	275	adjacent liver non-tumor
+GSM548496	28	adjacent liver non-tumor
+GSM548498	33	adjacent liver non-tumor
+GSM548500	34	adjacent liver non-tumor
+GSM548502	36	adjacent liver non-tumor
+GSM548504	38	adjacent liver non-tumor
+GSM548506	39	adjacent liver non-tumor
+GSM548341	40	adjacent liver non-tumor
+GSM548509	42	adjacent liver non-tumor
+GSM548511	43	adjacent liver non-tumor
+GSM548513	45	adjacent liver non-tumor
+GSM548515	46	adjacent liver non-tumor
+GSM548451	49	adjacent liver non-tumor
+GSM548517	51	adjacent liver non-tumor
+GSM548519	55	adjacent liver non-tumor
+GSM548521	60	adjacent liver non-tumor
+GSM548523	62	adjacent liver non-tumor
+GSM548525	64	adjacent liver non-tumor
+GSM548527	67	adjacent liver non-tumor
+GSM548531	68	adjacent liver non-tumor
+GSM548533	70	adjacent liver non-tumor
+GSM548535	71	adjacent liver non-tumor
+GSM548537	72	adjacent liver non-tumor
+GSM548343	73	adjacent liver non-tumor
+GSM548477	74	adjacent liver non-tumor
+GSM548346	76	adjacent liver non-tumor
+GSM548348	77	adjacent liver non-tumor
+GSM548350	78	adjacent liver non-tumor
+GSM548352	79	adjacent liver non-tumor
+GSM548354	80	adjacent liver non-tumor
+GSM548356	82	adjacent liver non-tumor
+GSM548358	84	adjacent liver non-tumor
+GSM548360	85	adjacent liver non-tumor
+GSM548362	86	adjacent liver non-tumor
+GSM548364	89	adjacent liver non-tumor
+GSM548366	90	adjacent liver non-tumor
+GSM548368	91	adjacent liver non-tumor
+GSM548370	92	adjacent liver non-tumor
+GSM548372	96	adjacent liver non-tumor
+GSM548374	98	adjacent liver non-tumor
+GSM548375	101	liver tumor
+GSM548377	105	liver tumor
+GSM548379	106	liver tumor
+GSM548381	108	liver tumor
+GSM548484	11	liver tumor
+GSM548383	110	liver tumor
+GSM548385	111	liver tumor
+GSM548387	114	liver tumor
+GSM548389	115	liver tumor
+GSM548391	116	liver tumor
+GSM548393	117	liver tumor
+GSM548395	118	liver tumor
+GSM548397	119	liver tumor
+GSM548399	121	liver tumor
+GSM548453	128	liver tumor
+GSM548401	146	liver tumor
+GSM548403	148	liver tumor
+GSM548455	149	liver tumor
+GSM548457	153	liver tumor
+GSM548406	154	liver tumor
+GSM548408	155	liver tumor
+GSM548460	156	liver tumor
+GSM548410	157	liver tumor
+GSM548412	159	liver tumor
+GSM548414	160	liver tumor
+GSM548462	161	liver tumor
+GSM548416	162	liver tumor
+GSM548418	163	liver tumor
+GSM548420	164	liver tumor
+GSM548422	165	liver tumor
+GSM548424	166	liver tumor
+GSM548426	167	liver tumor
+GSM548428	170	liver tumor
+GSM548430	171	liver tumor
+GSM548432	172	liver tumor
+GSM548434	173	liver tumor
+GSM548436	174	liver tumor
+GSM548438	175	liver tumor
+GSM548440	179	liver tumor
+GSM548442	180	liver tumor
+GSM548444	200	liver tumor
+GSM548446	203	liver tumor
+GSM548448	205	liver tumor
+GSM548486	21	liver tumor
+GSM548464	211	liver tumor
+GSM548466	212	liver tumor
+GSM548468	221	liver tumor
+GSM548470	227	liver tumor
+GSM548487	23	liver tumor
+GSM548489	24	liver tumor
+GSM548491	25	liver tumor
+GSM548472	255	liver tumor
+GSM548478	267	liver tumor
+GSM548479	268	liver tumor
+GSM548493	27	liver tumor
+GSM548483	270	liver tumor
+GSM548476	275	liver tumor
+GSM548495	28	liver tumor
+GSM548497	33	liver tumor
+GSM548499	34	liver tumor
+GSM548501	36	liver tumor
+GSM548503	38	liver tumor
+GSM548505	39	liver tumor
+GSM548507	40	liver tumor
+GSM548508	42	liver tumor
+GSM548510	43	liver tumor
+GSM548512	45	liver tumor
+GSM548514	46	liver tumor
+GSM548450	49	liver tumor
+GSM548516	51	liver tumor
+GSM548518	55	liver tumor
+GSM548520	60	liver tumor
+GSM548522	62	liver tumor
+GSM548524	64	liver tumor
+GSM548526	67	liver tumor
+GSM548530	68	liver tumor
+GSM548532	70	liver tumor
+GSM548534	71	liver tumor
+GSM548536	72	liver tumor
+GSM548342	73	liver tumor
+GSM548344	74	liver tumor
+GSM548345	76	liver tumor
+GSM548347	77	liver tumor
+GSM548349	78	liver tumor
+GSM548351	79	liver tumor
+GSM548353	80	liver tumor
+GSM548355	82	liver tumor
+GSM548357	84	liver tumor
+GSM548359	85	liver tumor
+GSM548361	86	liver tumor
+GSM548363	89	liver tumor
+GSM548365	90	liver tumor
+GSM548367	91	liver tumor
+GSM548369	92	liver tumor
+GSM548371	96	liver tumor
+GSM548373	98	liver tumor
