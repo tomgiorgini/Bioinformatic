@@ -14,18 +14,18 @@ library(survminer)
 
 
 
-setwd("C:/Users/tomma/OneDrive/Documenti/GitHub/Bioinformatic/Project")
+setwd("C:/Users/tomma/OneDrive/Desktop/Bioinformatic/Project")
 dirRes <- "Results/"
-dirC_MCI <- paste0(dirRes, "C_MCI", "/")
+dirAD_MCI <- paste0(dirRes, "AD_MCI", "/")
 
-filename_in <- "Results/C_MCI/matrix_DEG.txt"
+filename_in <- "Results/AD_MCI/matrix_DEG.txt"
 
-filename_list_case <-"Data/caseMCI.txt"
-filename_list_control <-"Data/control.txt"
+filename_list_case <-"Data/caseAD.txt"
+filename_list_control <-"Data/caseMCI.txt"
 
-file_score_plot = paste0(dirC_MCI, "score_plot.pdf")
-file_pareto_scree_plot = paste0(dirC_MCI,"pareto_screen_plot.pdf")
-file_contribution_plot = paste0(dirC_MCI,"PC_contibution_plot.pdf")
+file_score_plot = paste0(dirAD_MCI, "score_plot.pdf")
+file_pareto_scree_plot = paste0(dirAD_MCI,"pareto_screen_plot.pdf")
+file_contribution_plot = paste0(dirAD_MCI,"PC_contibution_plot.pdf")
 
 
 data = read.table(filename_in, header = T, sep = "\t", quote = "", check.names=F, row.names=1)
@@ -42,7 +42,7 @@ list_case = list_case$V1
 
 data = t(data[,c(list_case,list_control)])
 
-groups = c(rep("MCI", length(list_case)), rep("control", length(list_control)))
+groups = c(rep("AD", length(list_case)), rep("MCI", length(list_control)))
 
 
 # 2. Apply PCA
@@ -109,7 +109,7 @@ pdf(file_contribution_plot, width=10,height=7)
 corrplot(contrib_var[1:10,1:10], is.corr=FALSE, 
          tl.col = "black", 
          method = "color",
-         col = brewer.pal(n = 10, name = "BuPu"),
+         col = brewer.pal(n = 9, name = "BuPu"),
          addCoef.col = "black")
 
 # to PC1

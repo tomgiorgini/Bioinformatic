@@ -1,6 +1,5 @@
 rm(list=ls())
 
-
 options(stringAsFactors = F)
 library(stringr)
 library(ggbiplot)
@@ -14,7 +13,7 @@ library(survminer)
 
 
 
-setwd("C:/Users/tomma/OneDrive/Documenti/GitHub/Bioinformatic/Project")
+setwd("C:/Users/tomma/OneDrive/Desktop/Bioinformatic/Project")
 dirRes <- "Results/"
 dirC_AD <- paste0(dirRes, "C_AD", "/")
 
@@ -109,7 +108,7 @@ pdf(file_contribution_plot, width=10,height=7)
 corrplot(contrib_var[1:10,1:10], is.corr=FALSE, 
          tl.col = "black", 
          method = "color",
-         col = brewer.pal(n = 10, name = "BuPu"),
+         col = brewer.pal(n = 9, name = "BuPu"),
          addCoef.col = "black")
 
 # to PC1

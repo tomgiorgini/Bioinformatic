@@ -5,9 +5,9 @@ library(ggplot2)
 library(forcats)
 library(stringr)
 ################################################
-setwd("C:/Users/tomma/OneDrive/Documenti/GitHub/Bioinformatic/Project")
-source("getEnrichment.R")
-source("getEnrichmentPlot.R")
+setwd("C:/Users/tomma/OneDrive/Desktop/Bioinformatic/Project")
+source("Source/getEnrichment.R")
+source("Source/getEnrichmentPlot.R")
 ################################################
 
 dirRes <- "Results/"
@@ -44,7 +44,7 @@ input_list <- read.table(file_input_list, sep = "\t", header = T, check.names = 
 list <- split(input_list$GeneSymbol,input_list$direction)
 
 df <- lapply(list, function(x){
-  enrichr(x, dbs)
+ enrichr(x, dbs)
 })
 
 getEnrichment(df$UP,"UP")

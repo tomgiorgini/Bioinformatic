@@ -5,9 +5,9 @@ library(ggplot2)
 library(forcats)
 library(stringr)
 ################################################
-setwd("C:/Users/tomma/OneDrive/Documenti/GitHub/Bioinformatic/Project")
-source("getEnrichment.R")
-source("getEnrichmentPlot.R")
+setwd("C:/Users/tomma/OneDrive/Desktop/Bioinformatic/Project")
+source("Source/getEnrichment.R")
+source("Source/getEnrichmentPlot.R")
 ################################################
 
 dirRes <- "Results/"

@@ -3,7 +3,7 @@ rm(list=ls())
 
 options(stringAsFactors = F)
 
-setwd("C:/Users/tomma/OneDrive/Documenti/GitHub/Bioinformatic/Project")
+setwd("C:/Users/tomma/OneDrive/Desktop/Bioinformatic/Project")
 library("GEOquery")
 
 dirRes <- "Results/"

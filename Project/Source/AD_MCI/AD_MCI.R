@@ -4,7 +4,7 @@ options(stringAsFactors = F)
 library(stringr)
 library(pheatmap)
 
-setwd("C:/Users/tomma/OneDrive/Documenti/GitHub/Bioinformatic/Project")
+setwd("C:/Users/tomma/OneDrive/Desktop/Bioinformatic/Project")
 dirRes <- "Results/"
 
 dirAD_MCI <- paste0(dirRes, "AD_MCI", "/")

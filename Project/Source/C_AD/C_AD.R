@@ -4,25 +4,25 @@ options(stringAsFactors = F)
 library(stringr)
 library(pheatmap)
 
-setwd("C:/Users/tomma/OneDrive/Documenti/GitHub/Bioinformatic/Project")
+setwd("C:/Users/tomma/OneDrive/Desktop/Bioinformatic/Project")
 dirRes <- "Results/"
 
-dirC_MCI <- paste0(dirRes, "C_MCI", "/")
+dirC_AD <- paste0(dirRes, "C_AD", "/")
 
-if(!dir.exists(dirC_MCI)) {
-  dir.create(dirC_MCI)
+if(!dir.exists(dirC_AD)) {
+  dir.create(dirC_AD)
 } else {
-  print(paste("The directory", dirC_MCI, "already exists"))
+  print(paste("The directory", dirC_AD, "already exists"))
 }
 
-filename_in <- "Data/matrixC_MCI.txt"
+filename_in <- "Data/matrixC_AD.txt"
 
-filename_list_case <-"Data/caseMCI.txt"
+filename_list_case <-"Data/caseAD.txt"
 filename_list_control <-"Data/control.txt"
 
-filename_DEG <- paste0(dirC_MCI, "DEG.txt")
-filename_matrix_DEG <- paste0(dirC_MCI, "matrix_DEG.txt")
-filename_heatmap <- paste0(dirC_MCI, "heatmap.pdf")
+filename_DEG <- paste0(dirC_AD, "DEG.txt")
+filename_matrix_DEG <- paste0(dirC_AD, "matrix_DEG.txt")
+filename_heatmap <- paste0(dirC_AD, "heatmap.pdf")
 
 
 ###################################################################
@@ -95,7 +95,7 @@ rm(ind)
 
 ##parameters
 
-thr_FC <- 1.15
+thr_FC <- 1.1
 thr_pval <- 0.05
 paired <- FALSE
 
@@ -224,3 +224,4 @@ pheatmap(data,scale = "row", border_colors = NA, cluster_cols = T, cluster_rows 
          cutree_cols = 2,
          width= 10, height = 10,
          filename = filename_heatmap)
+

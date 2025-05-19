@@ -5,29 +5,22 @@ library(ggplot2)
 library(forcats)
 library(stringr)
 ################################################
-setwd("C:/Users/tomma/OneDrive/Desktop/Bioinformatic")
-source("enrichR_UP_DOWN/getEnrichment.R")
-source("enrichR_UP_DOWN/getEnrichmentPlot.R")
+setwd("C:/Users/tomma/OneDrive/Desktop/Bioinformatic/Project")
+source("Source/getEnrichment.R")
+source("Source/getEnrichmentPlot.R")
 ################################################
-dataset <- "BRCA"
 
-dirRes <- "Result/"
+dirRes <- "Results/"
 
-if (!dir.exists(dirRes)){
-  dir.create(dirRes)
-}else{
-  print(paste("The directory",dirRes,"already exists"))
+dirAD_MCI <- paste0(dirRes, "AD_MCI", "/")
+
+if(!dir.exists(dirAD_MCI)) {
+  dir.create(dirAD_MCI)
+} else {
+  print(paste("The directory", dirAD_MCI, "already exists"))
 }
 
-dirDataset <- paste0(dirRes,dataset,"/")
-
-if (!dir.exists(dirDataset)){
-  dir.create(dirDataset)
-}else{
-  print(paste("The directory",dirDataset,"already exists"))
-}
-
-dirEnrich <- paste0(dirDataset,"Functional_Enrichment/")
+dirEnrich <- paste0(dirAD_MCI,"Functional_Enrichment/")
 
 if (!dir.exists(dirEnrich)){
   dir.create(dirEnrich)
@@ -40,11 +33,11 @@ if (!dir.exists(dirEnrich)){
 top_term <- 10
 thr_pval <- 0.05
 ################################################
-file_input_list <- paste0(dirDataset,"DEG.txt")
+file_input_list <- paste0(dirAD_MCI,"DEG.txt")
 
 dbs <- listEnrichrDbs() #lista di tutti i db
 
-dbs <- c("DisGeNET","GO_Molecular_Function_2025", "GO_Biological_Process_2025", "KEGG_2021_Human", "TRANSFAC_and_JASPAR_PWMs")
+dbs <- c("DisGeNET","GO_Molecular_Function_2021", "GO_Biological_Process_2021", "KEGG_2021_Human", "TRANSFAC_and_JASPAR_PWMs")
 
 input_list <- read.table(file_input_list, sep = "\t", header = T, check.names = F, quote = "")
 # input_list <- input_list$genes
@@ -56,5 +49,3 @@ df <- lapply(list, function(x){
 
 getEnrichment(df$UP,"UP")
 getEnrichment(df$DOWN,"DOWN")
-
-
