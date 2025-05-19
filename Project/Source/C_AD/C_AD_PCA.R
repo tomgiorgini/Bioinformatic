@@ -52,7 +52,7 @@ pca <- prcomp(data, center = T, scale. = T, retx = T)
 ################################################
 # 3. Compute score and score plot
 # (scores = the coordinates of old data (observations) in the new systems, that are the PCs)
-
+pdf(file_score_plot)
 # pca$x = t(data)*pca$rotation 
 scores <- pca$x 
 
@@ -64,6 +64,7 @@ g <- ggbiplot(pca,
               groups = groups)
 print(g)
 
+dev.off()
 ################################################
 # 4. Compute eigenvalue
 # eigenvalues of the covariance matrix ordered in decreasing order (from the largest to the smallest)
@@ -115,10 +116,9 @@ corrplot(contrib_var[1:10,1:10], is.corr=FALSE,
 fviz_contrib(pca, choice = "var", axes = 1, top = 10)
 # to PC2
 fviz_contrib(pca, choice = "var", axes = 2, top = 10)
-# to PC3
-fviz_contrib(pca, choice = "var", axes = 3, top = 10)
 
-# total (PC1 + PC2 + PC3)
-fviz_contrib(pca, choice = "var", axes = 1:3, top = 15)
+# total (PC1 + PC2)
+fviz_contrib(pca, choice = "var", axes = 1:2, top = 15)
 
 dev.off()
+

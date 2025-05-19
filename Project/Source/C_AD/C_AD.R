@@ -123,6 +123,8 @@ adj_pval <- p.adjust(pval, method = "fdr")
 
 # 2.4 Volcano plot before filtering
 
+pdf("Results/C_AD/C_AD_VOLCANO_PRE_FILTERING.pdf")
+
 plot(logFC, -log10(adj_pval),
      main = "Volcano plot before filtering",
      xlab = "log2 Fold Change (FC)",
@@ -131,6 +133,8 @@ plot(logFC, -log10(adj_pval),
 
 abline(h = -log10(thr_pval), lty = 2, lwd = 2, col = "blue")
 abline(v = c(-log2(thr_FC), log2(thr_FC)), lty = 2, lwd = 2, col = "red")
+
+dev.off()
 
 # 2.5 Filtering: removing the genes lower than the threshold
 
@@ -150,6 +154,8 @@ rm(ind)
 
 #plot after filter 
 
+pdf("Results/C_AD/C_AD_VOLCANO_POST_FILTERING.pdf")
+
 plot(logFC_f, -log10(adj_pval_f),
      main = "Volcano plot after filtering",
      xlab = "log2 Fold Change (FC)",
@@ -159,6 +165,7 @@ plot(logFC_f, -log10(adj_pval_f),
 abline(h = -log10(thr_pval), lty = 2, lwd = 2, col = "blue")
 abline(v = c(-log2(thr_FC), log2(thr_FC)), lty = 2, lwd = 2, col = "red")
 
+dev.off()
 
 data = data_f
 dataC = dataC_f
@@ -169,7 +176,6 @@ pval = pval_f
 adj_pval = adj_pval_f
 
 rm(data_f,dataC_f,dataN_f,genes_f,logFC_f,pval_f,adj_pval_f)
-
 
 
 #EXPORTING RESULTS
@@ -224,4 +230,29 @@ pheatmap(data,scale = "row", border_colors = NA, cluster_cols = T, cluster_rows 
          cutree_cols = 2,
          width= 10, height = 10,
          filename = filename_heatmap)
+
+pdf("Results/C_AD/boxplot.pdf")
+
+index = which.max(logFC)
+
+gene_id = genes[index]
+
+boxplot(
+  as.numeric(dataN[index, ]),
+  as.numeric(dataC[index, ]),
+  main  = paste0(
+    DEG$geneSymbol[index], ", adjusted p-val = ",
+    format(adj_pval[index], digits = 2)
+  ),
+  notch = TRUE,
+  ylab  = "Gene expression value",
+  xlab  = "Condition",
+  names = c("Control", "Alzheimer Disease"),
+  col   = c("green", "orange"),
+  pars  = list(boxwex = 0.3, staplewex = 0.6),
+  cex.lab  = 1.2,    # ingrandisce le label degli assi
+  cex.axis = 1       # ingrandisce i tick/names
+)
+
+dev.off()
 

@@ -31,7 +31,7 @@ if (!dir.exists(dirEnrich)){
 
 ################################################
 top_term <- 10
-thr_pval <- 0.05
+thr_pval <- 1
 ################################################
 file_input_list <- paste0(dirAD_MCI,"DEG.txt")
 

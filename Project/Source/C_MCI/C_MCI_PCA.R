@@ -56,6 +56,8 @@ pca <- prcomp(data, center = T, scale. = T, retx = T)
 # pca$x = t(data)*pca$rotation 
 scores <- pca$x 
 
+pdf(file_score_plot)
+
 # pdf("pca.pdf",width=5, height=5) 
 g <- ggbiplot(pca, 
               obs.scale = 1, 
@@ -63,6 +65,8 @@ g <- ggbiplot(pca,
               ellipse = T, 
               groups = groups)
 print(g)
+
+dev.off()
 
 ################################################
 # 4. Compute eigenvalue
@@ -115,11 +119,9 @@ corrplot(contrib_var[1:10,1:10], is.corr=FALSE,
 fviz_contrib(pca, choice = "var", axes = 1, top = 10)
 # to PC2
 fviz_contrib(pca, choice = "var", axes = 2, top = 10)
-# to PC3
-fviz_contrib(pca, choice = "var", axes = 3, top = 10)
 
-# total (PC1 + PC2 + PC3)
-fviz_contrib(pca, choice = "var", axes = 1:3, top = 15)
+# total (PC1 + PC2)
+fviz_contrib(pca, choice = "var", axes = 1:2, top = 15)
 
 dev.off()
 
