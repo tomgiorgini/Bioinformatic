@@ -10,8 +10,8 @@ getEnrichment <- function(df,tag){
   ##############
   
   DisGeNET <- df$DisGeNET
-  BP <- df$GO_Biological_Process_2025
-  MF <- df$GO_Molecular_Function_2025
+  BP <- df$GO_Biological_Process_2021
+  MF <- df$GO_Molecular_Function_2021
   
   KEGG <- df$KEGG_2021_Human
   
@@ -21,7 +21,7 @@ getEnrichment <- function(df,tag){
   getEnrichmentPlot(BP,"GO_BP",top_term,thr_pval,dirEnrichDirection)
   getEnrichmentPlot(MF,"GO_MF",top_term,thr_pval,dirEnrichDirection)
   getEnrichmentPlot(KEGG,"KEGG",top_term,thr_pval,dirEnrichDirection)
- # getEnrichmentPlot(TF,"TF",top_term,thr_pval,dirEnrichDirection)
+ #getEnrichmentPlot(TF,"TF",top_term,thr_pval,dirEnrichDirection)
   
 }
 
