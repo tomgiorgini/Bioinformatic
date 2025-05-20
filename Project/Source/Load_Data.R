@@ -13,8 +13,8 @@ if (!dir.exists(dirRes)){
   print(paste("The
 directory",dirRes,"already exists"))
 }
-dataset <- "GEO_ALZHEIMER"
-dirDataset <- paste0(dirRes,dataset,"/")
+dataset <- "Data"
+dirDataset <- paste0(dataset,"/")
 if (!dir.exists(dirDataset)){
   dir.create(dirDataset)
 }else{

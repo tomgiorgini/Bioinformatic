@@ -182,6 +182,10 @@ result = result[order(result$logFC, decreasing = T),]
 write.table(result, file=filename_DEG, row.names = F,
             sep = "\t", quote = F)
 
+write.table(result$GeneSymbol[result$direction == 'UP'], file='Results/AD_MCI/genes_UP.txt', row.names = F,
+            sep = "\t", quote = F)
+write.table(result$GeneSymbol[result$direction == 'DOWN'], file='Results/AD_MCI/genes_DOWN.txt', row.names = F,
+            sep = "\t", quote = F)
 write.table(data, file=filename_matrix_DEG, row.names = T, col.names = NA,
             sep = "\t", quote = F)
 
