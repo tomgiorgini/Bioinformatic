@@ -87,7 +87,6 @@ dataMCI <- matrix[,caseMCI]
 dataC_AD <- matrix[,c(control,caseAD)]
 dataC_MCI <- matrix[,c(control,caseMCI)]
 dataAD_MCI <- matrix[,c(caseAD,caseMCI)]
-metadata = metadata[,c("geo_accession","status:ch1")]
 rm(list,matrix)
 
 ############################################

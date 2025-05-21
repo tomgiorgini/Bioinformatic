@@ -47,5 +47,9 @@ df <- lapply(list, function(x){
   enrichr(x, dbs)
 })
 
-getEnrichment(df$UP,"UP")
-getEnrichment(df$DOWN,"DOWN")
+groups <- names(df)
+
+lapply(groups, function(g) {
+  tag <- gsub("\\.", "_", g)
+  getEnrichment(df[[g]], tag)
+})

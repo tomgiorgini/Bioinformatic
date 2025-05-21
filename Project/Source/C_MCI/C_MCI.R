@@ -237,25 +237,32 @@ pheatmap(data,scale = "row", border_colors = NA, cluster_cols = T, cluster_rows 
 
 pdf("Results/C_MCI/boxplot.pdf")
 
-index = which.max(logFC)
+# 1) prendi i primi 3 indici (logFC più alti) e gli ultimi 3 (logFC più bassi)
+top3_idx    <- order(logFC, decreasing = TRUE)[1:3]
+bottom3_idx <- order(logFC, decreasing = FALSE)[1:3]
+idxs        <- c(top3_idx, bottom3_idx)
 
-gene_id = genes[index]
-
-boxplot(
-  as.numeric(dataN[index, ]),
-  as.numeric(dataC[index, ]),
-  main  = paste0(
-    DEG$geneSymbol[index], ", adjusted p-val = ",
-    format(adj_pval[index], digits = 2)
-  ),
-  notch = TRUE,
-  ylab  = "Gene expression value",
-  xlab  = "Condition",
-  names = c("Control", "Mild Cognitive Impairment"),
-  col   = c("green", "orange"),
-  pars  = list(boxwex = 0.3, staplewex = 0.6),
-  cex.lab  = 1.2,    # ingrandisce le label degli assi
-  cex.axis = 1       # ingrandisce i tick/names
+# 2) prepara il layout 2 righe × 3 colonne
+par(mfrow = c(2, 3),      # 2 x 3 plots
+    mar   = c(4, 4, 3, 1)  # margini leggermente ridotti
 )
 
+# 3) cicla su ciascun indice e disegna il boxplot
+for (idx in idxs) {
+  boxplot(
+    as.numeric(dataN[idx, ]),
+    as.numeric(dataC[idx, ]),
+    main = paste0(
+      DEG$geneSymbol[idx], 
+      "\nadj p-val = ", format(adj_pval[idx], digits = 2)
+    ),
+    notch = TRUE,
+    ylab  = "Gene expression value",
+    names = c("Control", "Alzheimer Disease"),
+    col   = c("green", "orange"),
+    pars  = list(boxwex = 0.3, staplewex = 0.6),
+    cex.lab  = 1.2,
+    cex.axis = 1
+  )
+}
 dev.off()
