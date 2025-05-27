@@ -1,0 +1,2 @@
+Term	Overlap	P.value	Adjusted.P.value	Gene_count	Gene_ratio	Genes
+Cysteine-Type Endopeptidase Activator Activity (GO:0140608)	3/8	8.16001858353222e-05	0.0198288451579833	3	0.375	NLRP12;APAF1;CARD8

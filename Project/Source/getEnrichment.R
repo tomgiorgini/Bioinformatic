@@ -10,8 +10,8 @@ getEnrichment <- function(df,tag){
   ##############
   
   DisGeNET <- df$DisGeNET
-  BP <- df$GO_Biological_Process_2021
-  MF <- df$GO_Molecular_Function_2021
+  BP <- df$GO_Biological_Process_2025
+  MF <- df$GO_Molecular_Function_2025
   
   KEGG <- df$KEGG_2021_Human
   

@@ -1,0 +1,3 @@
+Term	Overlap	P.value	Adjusted.P.value	Gene_count	Gene_ratio	Genes
+Golgi to Vacuole Transport (GO:0006896)	4/16	8.27182578713722e-06	0.00885085359223682	4	0.25	GAK;CLN3;AP1G2;LAMP1
+Golgi to Lysosome Transport (GO:0090160)	3/10	6.80902136045343e-05	0.0364282642784258	3	0.3	GAK;CLN3;LAMP1

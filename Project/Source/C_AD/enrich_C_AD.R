@@ -37,7 +37,7 @@ file_input_list <- paste0(dirC_AD,"DEG.txt")
 
 dbs <- listEnrichrDbs() #lista di tutti i db
 
-dbs <- c("DisGeNET","GO_Molecular_Function_2021", "GO_Biological_Process_2021", "KEGG_2021_Human", "TRANSFAC_and_JASPAR_PWMs")
+dbs <- c("DisGeNET","GO_Molecular_Function_2025", "GO_Biological_Process_2025", "KEGG_2021_Human", "TRANSFAC_and_JASPAR_PWMs")
 
 input_list <- read.table(file_input_list, sep = "\t", header = T, check.names = F, quote = "")
 # input_list <- input_list$genes

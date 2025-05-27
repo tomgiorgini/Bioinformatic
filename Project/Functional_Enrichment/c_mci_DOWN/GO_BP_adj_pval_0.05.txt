@@ -1,0 +1,2 @@
+Term	Overlap	P.value	Adjusted.P.value	Gene_count	Gene_ratio	Genes
+Positive Regulation of Pyroptotic Inflammatory Response (GO:0140639)	3/6	1.89826268417277e-05	0.0181473912606917	3	0.5	GBP5;CASP3;GBP1
